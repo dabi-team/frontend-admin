@@ -1,7 +1,7 @@
 $primary-color: rgb(0, 2, 138);
 $primary2-color: rgb(21, 0, 143);
-$primary3-color: rgb(75, 36, 119);
-$secondary-color: rgb(247, 0, 255);
+$primary3-color: rgb(83, 54, 117);
+$secondary-color: rgb(252, 162, 255);
 $secondary2-color: rgb(163, 64, 150);
 $secondary3-color: rgb(255, 0, 140);
 $tertiary-color: rgb(255, 0, 0);
@@ -18,8 +18,12 @@ $tertiary-text-color: rgb(255, 251, 0);
 $tertiary2-text-color: rgb(255, 94, 0);
 $tertiary3-text-color: rgb(255, 94, 0);
 
+$white: #ffffff;
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+*::-webkit-scrollbar {
+  display: none;
 }

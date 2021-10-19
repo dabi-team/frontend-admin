@@ -1,8 +1,9 @@
+
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './style.scss';
 
-const Navbar = () =>{
+const Page2 = () =>{
   const location = useLocation();
     return(
       <div className='nav-container'>
@@ -29,8 +30,9 @@ const Navbar = () =>{
               </a>
           </div>
         </nav>
+        <h1>Page2</h1>
         </div>
     )
 }
 
-export default Navbar;
+export default Page2;
