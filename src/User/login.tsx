@@ -1,11 +1,12 @@
+
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import './style.scss';
+import './login.scss';
 
-const Navbar = () =>{
+const Login = () =>{
   const location = useLocation();
-  const signedin = false;
-    return(
+  const signedin:boolean = false;
+  return(
       <div className='nav-container'>
         <nav className='nav'>
           <div className='flex'>
@@ -36,4 +37,4 @@ const Navbar = () =>{
     )
 }
 
-export default Navbar;
+export default Login;

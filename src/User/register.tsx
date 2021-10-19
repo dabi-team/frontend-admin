@@ -1,10 +1,10 @@
+
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import './style.scss';
+import './register.scss';
 
-const Navbar = () =>{
+const Register = () =>{
   const location = useLocation();
-  const signedin = false;
     return(
       <div className='nav-container'>
         <nav className='nav'>
@@ -26,9 +26,7 @@ const Navbar = () =>{
           </div>
           <div className="flex">
               <a>
-                  {signedin? 
-                  <Link to='/Artwork'>Account</Link>:
-                  <Link to='/Login'>signin</Link>}
+                  <Link to='/Artwork'>signin</Link>
               </a>
           </div>
         </nav>
@@ -36,4 +34,4 @@ const Navbar = () =>{
     )
 }
 
-export default Navbar;
+export default Register;

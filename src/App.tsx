@@ -8,7 +8,7 @@ import Page3 from './Pages/page3/home';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"> 
       <Navbar/>
        <span>
               <Switch>
