@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import "./assets/fonts/Poppins/Poppins-Regular.ttf";
+import "./assets/fonts/Playfair_Display/PlayfairDisplay-Italic-VariableFont_wght.ttf";
+import "./assets/fonts/Open_Sans_Condensed/OpenSansCondensed-Light.ttf";
+import './index.scss';
+import { BrowserRouter } from 'react-router-dom';
+import {Provider} from "react-redux";
+import store from "./redux/store";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    <BrowserRouter>
+    <Provider store={store}>
     <App />
+    </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

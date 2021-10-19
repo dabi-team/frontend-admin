@@ -1,0 +1,34 @@
+@import "styles/config";
+
+.nav{
+  padding:1rem 2rem;
+  margin: 1rem 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+    a{
+    color: $primary2-text-color;
+    font-family: "Playfair", sans-serif;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius:28px;
+        :hover{
+        background-color: #ddd;
+        color: black;
+        }
+        .active {
+        background-color: $secondary2-color;
+        color: white;
+        }
+    }
+    
+    .icon {
+    color: $primary2-text-color;
+    padding: 0px;
+    margin: 0px;
+    max-height: 1rem;
+    max-width: 1rem;
+    }
+}
