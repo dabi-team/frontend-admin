@@ -3,7 +3,7 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './style.scss';
 
-const Page1 = () =>{
+const Page3 = () =>{
   const location = useLocation();
     return(
       <div className='nav-container'>
@@ -30,9 +30,9 @@ const Page1 = () =>{
               </a>
           </div>
         </nav>
-        <h1>Page1</h1>
+        <h1>Page3</h1>
         </div>
     )
 }
 
-export default Page1;
+export default Page3;

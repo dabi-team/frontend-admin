@@ -1,35 +1,45 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './style.scss';
+import {BsCart3} from 'react-icons/bs';
 
 const Navbar = () =>{
   const location = useLocation();
-  const signedin = false;
+  const signedin = true;
     return(
-      <div className='nav-container'>
+      <div className='nav-container '>
         <nav className='main-nav'>
           <div className='flex'>
               <a>
-                  <Link to='/Artwork'>dabi</Link>
+                  <Link to='/'>DABI</Link>
               </a>
           </div>
           <div className="nav-links">
               <a>
-                  <Link className={(location.pathname === '/')? 'active':''} to="/">Form</Link>
+                  <Link className={(location.pathname === '/')? 'active':''} to="/">Discover</Link>
               </a>
               <a>
-                  <Link className={(location.pathname === '/Form')? 'active':''} to="/Form">Form</Link>
+                  <Link className={(location.pathname === '/Categories')? 'active':''} to="/Categories">Categories</Link>
               </a>
               <a>
                   <Link className={(location.pathname === '/Art')? 'active':''} to="/Art">Form</Link>
               </a>
           </div>
           <div className="flex">
+                  {signedin?
+              <div className='flex flex-row'> 
+                        <Link to='/Cart' className='flex flex-row5' >
+                            <BsCart3 className='icon pb-5'/>
+                        </Link>
+                    <a>
+                        <Link to='/Account'>Account</Link>
+                    </a>
+              </div>
+              :
               <a>
-                  {signedin? 
-                  <Link to='/Artwork'>Account</Link>:
-                  <Link to='/Login'>signin</Link>}
+                  <Link to='/Login'>SignIn</Link>
               </a>
+                }
           </div>
         </nav>
         </div>

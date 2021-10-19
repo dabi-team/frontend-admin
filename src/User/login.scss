@@ -8,24 +8,22 @@
 }
 
 form{
-    background-color: $primary3-text-color;
+    background-color: $white;
     border-radius: 10px;
-    padding: 3rem;
-    .grid-button{
+    padding: 3rem 5rem;
+    .button-container{
         margin-top: 2rem;
-        display: grid;
-        grid-template-columns: 50% 50%;
         button{
             font-size: 20px;
-            padding: 8px 35px;
+            padding: 5px 35px;
             border-radius: 8px;
-            background-color: $primary2-text-color;
-            color: $primary3-text-color;
+            background-color: $primary-color;
+            color: $white;
         }
         .signup{
             color: $primary2-text-color;
-            border: 4px solid $primary2-text-color;
-            background-color: $primary3-text-color;
+            border: 4px solid $primary-color;
+            background-color: $white;
         }
     }
     h3{
@@ -38,9 +36,25 @@ form{
         margin: 1.5rem 0.5rem;
         font-size: 20px;
         input{
+            background-color: $light-grey;
             height: 2.5rem;
             border-radius: 5px;
-            padding: 6px;
+            padding: 7px;
         } 
     }
 }
+.grid-button{
+        display: grid;
+        grid-template-columns: 50% 50%;
+}
+.register-button{
+    height: 4rem;
+    button{
+    width: 100%;
+    font-size: 25px;
+    height: 4rem;
+    border-radius: 8px;
+    background-color: $primary-color;
+    color: $white;
+}
+} 

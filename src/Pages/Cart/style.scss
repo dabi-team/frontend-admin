@@ -1,24 +1,24 @@
 @import "styles/config";
 
-.main-nav{
-  position: fixed;
-  width: 100vw;
+.nav{
+  position: sticky;
+  top: 0;
   padding:1rem 2rem;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
     a{
-    color: $primary3-text-color;
+    color: $primary2-text-color;
     font-family: "Poppins", sans-serif;
     text-align: center;
     padding: 11px 20px;
     text-decoration: none;
     font-size: 20px;
         :hover{
-        color: $primary-color;
+        color: $secondary-color;
         }
         .active {
-        border-bottom: 3px solid $primary3-text-color;
+        border-bottom: 3px solid $primary2-text-color;
       }
     }
     .nav-links{
@@ -27,11 +27,11 @@
     }
     
     .icon {
-    color: $primary3-text-color;
-    padding: 3px;
-    margin-right: 4px;
-    height: 2.5rem;
-    width: 2.5rem;
+    color: $primary2-text-color;
+    padding: 0px;
+    margin: 0px;
+    max-height: 1rem;
+    max-width: 1rem;
     }
 }
     .nav-container{

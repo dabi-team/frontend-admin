@@ -1,0 +1,12 @@
+@import "styles/config";
+
+.card-container{
+  padding: 3re;
+  background-color: $light-grey;
+  width: 20vw;
+  padding: 1rem;
+  margin: 2rem;
+  img{
+    width: 90%;
+  }
+}

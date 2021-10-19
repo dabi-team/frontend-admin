@@ -8,20 +8,20 @@ const Login = () =>{
   return(
       <div className='login-box'>
           <div>
-          <form>
+          <form className='shadow-xl'>
                 <h3>Welcome back</h3>
-                <div className="form-group">
+                <div className="form-group poppins">
                     <label>Email address</label>
                     <input type="email" className="form-control" placeholder="Enter email" />
                 </div>
 
-                <div className="form-group">
+                <div className="form-group poppins">
                     <label>Password</label>
                     <input type="password" className="form-control" placeholder="Enter password" />
                 </div>
-                <div className='grid-button'>
-                <button type="submit" onClick={()=>history.push('/')} className="btn btn-primary btn-block m-1">login</button>
-                <button type="submit" onClick={()=>history.push('/Register')} className="btn btn-primary btn-block m-1 signup">create an account</button>
+                <div className='button-container grid-button poppins'>
+                <button type="submit" onClick={()=>history.push('/')} className="btn btn-primary btn-block m-1">Login</button>
+                <button type="submit" onClick={()=>history.push('/Register')} className="btn btn-primary btn-block m-1 signup">Create An Account</button>
                 </div>
             </form>
             </div>
