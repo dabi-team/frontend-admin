@@ -1,39 +1,31 @@
 
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useHistory } from 'react-router';
 import './login.scss';
 
 const Login = () =>{
-  const location = useLocation();
-  const signedin:boolean = false;
+    const history = useHistory();
   return(
-      <div className='nav-container'>
-        <nav className='nav'>
-          <div className='flex'>
-              <a>
-                  <Link to='/Artwork'>dabi</Link>
-              </a>
-          </div>
-          <div className="nav-links">
-              <a>
-                  <Link className={(location.pathname === '/')? 'active':''} to="/">Form</Link>
-              </a>
-              <a>
-                  <Link className={(location.pathname === '/Form')? 'active':''} to="/Form">Form</Link>
-              </a>
-              <a>
-                  <Link className={(location.pathname === '/Art')? 'active':''} to="/Art">Form</Link>
-              </a>
-          </div>
-          <div className="flex">
-              <a>
-                  {signedin? 
-                  <Link to='/Artwork'>Account</Link>:
-                  <Link to='/Login'>signin</Link>}
-              </a>
-          </div>
-        </nav>
-        </div>
+      <div className='login-box'>
+          <div>
+          <form>
+                <h3>Welcome back</h3>
+                <div className="form-group">
+                    <label>Email address</label>
+                    <input type="email" className="form-control" placeholder="Enter email" />
+                </div>
+
+                <div className="form-group">
+                    <label>Password</label>
+                    <input type="password" className="form-control" placeholder="Enter password" />
+                </div>
+                <div className='grid-button'>
+                <button type="submit" onClick={()=>history.push('/')} className="btn btn-primary btn-block m-1">login</button>
+                <button type="submit" onClick={()=>history.push('/Register')} className="btn btn-primary btn-block m-1 signup">create an account</button>
+                </div>
+            </form>
+            </div>
+     </div>
     )
 }
 

@@ -7,7 +7,7 @@ const Navbar = () =>{
   const signedin = false;
     return(
       <div className='nav-container'>
-        <nav className='nav'>
+        <nav className='main-nav'>
           <div className='flex'>
               <a>
                   <Link to='/Artwork'>dabi</Link>

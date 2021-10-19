@@ -1,37 +1,29 @@
 
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import './register.scss';
+import './login.scss';
 
-const Register = () =>{
-  const location = useLocation();
-    return(
-      <div className='nav-container'>
-        <nav className='nav'>
-          <div className='flex'>
-              <a>
-                  <Link to='/Artwork'>dabi</Link>
-              </a>
-          </div>
-          <div className="nav-links">
-              <a>
-                  <Link className={(location.pathname === '/')? 'active':''} to="/">Form</Link>
-              </a>
-              <a>
-                  <Link className={(location.pathname === '/Form')? 'active':''} to="/Form">Form</Link>
-              </a>
-              <a>
-                  <Link className={(location.pathname === '/Art')? 'active':''} to="/Art">Form</Link>
-              </a>
-          </div>
-          <div className="flex">
-              <a>
-                  <Link to='/Artwork'>signin</Link>
-              </a>
-          </div>
-        </nav>
-        </div>
+const Login = () =>{
+  return(
+      <div>
+          <div>
+          <form>
+                <h3>Welcome</h3>
+                <div className="form-group">
+                    <label>Email address</label>
+                    <input type="email" className="form-control" placeholder="Enter email" />
+                </div>
+                <div className="form-group">
+                    <label>Password</label>
+                    <input type="password" className="form-control" placeholder="Enter password" />
+                </div>
+                <div className='grid-button'>
+                <button type="submit" className="btn btn-primary btn-block m-1">login</button>
+                <button type="submit" className="btn btn-primary btn-block m-1 signup">create an account</button>
+                </div>
+            </form>
+            </div>
+     </div>
     )
 }
 
-export default Register;
+export default Login;

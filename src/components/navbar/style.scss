@@ -1,24 +1,22 @@
 @import "styles/config";
 
-.nav{
-  position: sticky;
-  top: 0;
+.main-nav{
   padding:1rem 2rem;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
     a{
-    color: $primary2-text-color;
+    color: $primary3-text-color;
     font-family: "Poppins", sans-serif;
     text-align: center;
     padding: 11px 20px;
     text-decoration: none;
     font-size: 20px;
         :hover{
-        color: $secondary-color;
+        color: $primary-color;
         }
         .active {
-        border-bottom: 3px solid $primary2-text-color;
+        border-bottom: 3px solid $primary3-text-color;
       }
     }
     .nav-links{
