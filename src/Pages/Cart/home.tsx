@@ -11,6 +11,24 @@ const Cart = () =>{
           <h1 className='text-2xl px-9 poppins'>Your Cart:</h1>
           <HorizontalCard/>
           <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
+          <HorizontalCard/>
       </div>
     )
 }

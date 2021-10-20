@@ -15,7 +15,7 @@ const Product = () =>{
             <div className="text-xl p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi perferendis quo ullam temporibus, officia debitis atque repudiandae labore. Rerum tenetur incidunt quo, iusto ullam architecto excepturi quibusdam voluptatem labore non!</div>
             <div className="text-xl p-2">$1000</div>
           <div className="flex">
-            <button>Buy</button>
+            <button>Now Buy</button>
             <button className='flex'><BsFillCartPlusFill className='mr-4'/>Add to Cart</button>
           </div>
            </div>
