@@ -8,7 +8,7 @@ const HorizontalCard = () => {
      <div className='details-container col-span-12'>
         <div className="buying flex justify-between">
           <div>
-            <div className='font-bold text-xl mb-1'>laptop</div>
+            <div className='text-xl mb-1'>laptop</div>
             <div className="description">Asus</div>
           </div>
           <div className="price text-lg font-bold pt-2">$1000</div>

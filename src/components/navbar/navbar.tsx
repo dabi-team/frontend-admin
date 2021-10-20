@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './style.scss';
 import {BsCart3} from 'react-icons/bs';
+import {AiOutlineHeart} from 'react-icons/ai'
 
 const Navbar = () =>{
   const location = useLocation();
@@ -30,6 +31,9 @@ const Navbar = () =>{
               <div className='flex flex-row'> 
                         <Link to='/Cart' className='flex flex-row5' >
                             <BsCart3 className={(location.pathname === '/Cart')? ' icon pb-5 active':'icon pb-5'}/>
+                        </Link>
+                        <Link to='/Wishlist' className='flex flex-row5' >
+                            <AiOutlineHeart className={(location.pathname === '/Wishlist')? ' icon pb-5 active':'icon pb-5'}/>
                         </Link>
                     <a>
                         <Link to='/Account'>Account</Link>

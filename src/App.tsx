@@ -8,6 +8,7 @@ import Page3 from './Pages/page3/home';
 import Cart from './Pages/Cart/home';
 import Account from './Pages/Account/home';
 import Product from './Pages/Product/Product';
+import Wishlist from './Pages/Wishlist/Wishlist';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
                   </Route>
                   <Route path='/Product'>
                       <Product/>
+                  </Route>
+                  <Route path='/Wishlist'>
+                      <Wishlist/>
                   </Route>
               </Switch>
           </span> 

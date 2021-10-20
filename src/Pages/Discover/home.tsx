@@ -7,7 +7,17 @@ import './style.scss';
 const Page1 = () =>{
   const location = useLocation();
     return(
-      <div className='flex mx-12'>
+      <div className='grid mx-12'>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
           <Card/>
           <Card/>
       </div>
