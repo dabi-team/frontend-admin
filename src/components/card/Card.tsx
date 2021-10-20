@@ -1,6 +1,7 @@
 import React from "react";
 import logo from '../../logo.svg';
-import './style.scss'
+import './style.scss';
+import {BsFillCartPlusFill} from 'react-icons/bs';
 const Card = () => {
     return(
   <div className='card-container shadow-lg'>
@@ -12,7 +13,7 @@ const Card = () => {
           <div className="price text-lg font-bold pt-2">$1000</div>
           <div className="flex">
             <button>Buy</button>
-            <button>Cart</button>
+            <button><BsFillCartPlusFill/></button>
           </div>
         </div>
        </div>
