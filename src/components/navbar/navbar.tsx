@@ -22,14 +22,14 @@ const Navbar = () =>{
                   <Link className={(location.pathname === '/Categories')? 'active':''} to="/Categories">Categories</Link>
               </a>
               <a>
-                  <Link className={(location.pathname === '/Art')? 'active':''} to="/Art">Form</Link>
+                  <Link className={(location.pathname === '/Art')? 'active':''} to="/Art">Your Orders</Link>
               </a>
           </div>
           <div className="flex">
                   {signedin?
               <div className='flex flex-row'> 
                         <Link to='/Cart' className='flex flex-row5' >
-                            <BsCart3 className='icon pb-5'/>
+                            <BsCart3 className={(location.pathname === '/Cart')? ' icon pb-5 active':'icon pb-5'}/>
                         </Link>
                     <a>
                         <Link to='/Account'>Account</Link>

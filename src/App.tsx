@@ -5,6 +5,9 @@ import { Route, Switch } from 'react-router-dom';
 import Page1 from './Pages/Discover/home';
 import Page2 from './Pages/Categories/home';
 import Page3 from './Pages/page3/home';
+import Cart from './Pages/Cart/home';
+import Account from './Pages/Account/home';
+import Product from './Pages/Product/Product';
 
 function App() {
   return (
@@ -23,10 +26,13 @@ function App() {
                       <Page3/>
                   </Route>
                   <Route path='/Cart'>
-                      <Page3/>
+                      <Cart/>
                   </Route>
                   <Route path='/Account'>
-                      <Page3/>
+                      <Account/>
+                  </Route>
+                  <Route path='/Product'>
+                      <Product/>
                   </Route>
               </Switch>
           </span> 

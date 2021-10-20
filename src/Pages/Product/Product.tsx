@@ -1,10 +1,9 @@
-
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './style.scss';
 import logo from '../../logo.svg';
 
-const Account = () =>{
+const Product = () =>{
   const location = useLocation();
     return(
     <div className='nav-container'>
@@ -20,4 +19,4 @@ const Account = () =>{
     )
 }
 
-export default Account;
+export default Product;
