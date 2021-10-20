@@ -49,14 +49,13 @@ export const login = createAsyncThunk(
   }
 );
 
-export const sign = createAsyncThunk(
-  "auth/signup",
-  async (cred: Credentials) => {
-    const responce: any = await api.get("auth/signup");
+export const sign = createAsyncThunk("auth/signup", async (cred: any) => {
+  const responce: any = await api.post("auth/signup", {
+    ...cred,
+  });
 
-    return responce.data as any;
-  }
-);
+  return responce.data as any;
+});
 const CartSlice = createSlice({
   name: "cart",
   initialState,
