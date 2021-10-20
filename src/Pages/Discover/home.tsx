@@ -7,7 +7,7 @@ import './style.scss';
 const Page1 = () =>{
   const location = useLocation();
     return(
-      <div className='mx-12'>
+      <div className='flex mx-12'>
           <Card/>
           <Card/>
       </div>

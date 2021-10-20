@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App"> 
       <Navbar/>
+      <div className='m-24'></div>
        <span>
               <Switch> 
                   <Route path='/' exact>
