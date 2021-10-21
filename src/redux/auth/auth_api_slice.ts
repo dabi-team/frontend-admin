@@ -15,6 +15,8 @@ const usersState = user
           _id: "",
           email: "",
           password: "",
+          name: "",
+          number: "",
         },
       },
     };
@@ -66,6 +68,7 @@ const CartSlice = createSlice({
       localStorage.setItem("profile", JSON.stringify({ ...state.auth }));
     });
     builder.addCase(sign.fulfilled, (state, action) => {
+      localStorage.setItem("profile", JSON.stringify({ ...state.auth }));
       state.auth = action.payload;
     });
   },
