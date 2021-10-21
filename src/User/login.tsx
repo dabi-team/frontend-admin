@@ -21,12 +21,12 @@ const Login = () => {
 
   const onSubmit = async (e: any) => {
     e.preventDefault();
-    await dispatch(
-      login({
-        email: User.email,
-        password: User.password,
-      })
-    );
+    // await dispatch(
+    //   login({
+    //     email: User.email,
+    //     password: User.password,
+    //   })
+    // );
     history.push("/");
   };
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {

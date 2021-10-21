@@ -5,7 +5,7 @@ import { addToCart } from "../../redux/cart/cart_api_slice";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import { fetchAllProducts } from "../../redux/products/products_api_slice";
 import "./style.scss";
-
+import cogoToast from "cogo-toast";
 const Page1 = () => {
   const dispatch = useAppDispatch();
 
@@ -16,6 +16,7 @@ const Page1 = () => {
   }, [dispatch]);
   const history = useHistory();
   const addToCartLis = (productId: string) => {
+    cogoToast.success("Item is added to cart");
     dispatch(
       addToCart({
         userId: user?.user._id!,

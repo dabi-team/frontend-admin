@@ -20,7 +20,7 @@ const Page2 = () => {
       {products.map((product) => {
         return (
           <CategorieCard
-            image={product.title}
+            image={product.image}
             name={product.title}
             description={product.description}
             categorie={product.title}
