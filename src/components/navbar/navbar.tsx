@@ -6,7 +6,7 @@ import {AiOutlineHeart} from 'react-icons/ai'
 
 const Navbar = () =>{
   const location = useLocation();
-  const signedin = true;
+  const signedin:boolean = localStorage.getItem('profile')? true : false;
     return(
       <div className='nav-container '>
         <nav className='main-nav'>
@@ -32,9 +32,9 @@ const Navbar = () =>{
                         <Link to='/Cart' className='flex flex-row5' >
                             <BsCart3 className={(location.pathname === '/Cart')? ' icon pb-5 active':'icon pb-5'}/>
                         </Link>
-                        <Link to='/Wishlist' className='flex flex-row5' >
+                        {/* <Link to='/Wishlist' className='flex flex-row5' >
                             <AiOutlineHeart className={(location.pathname === '/Wishlist')? ' icon pb-5 active':'icon pb-5'}/>
-                        </Link>
+                        </Link> */}
                     <a>
                         <Link to='/Account'>Account</Link>
                     </a>

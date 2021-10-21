@@ -32,7 +32,10 @@ const Cart = () => {
 
   return (
     <div className="mx-12">
-      <h1 className="text-xl px-9 poppins">Your Cart:</h1>
+      <div className='flex justify-between'>
+        <h1 className="text-xl px-9 poppins">Your Cart:</h1>
+        <button className='bg-indigo-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-3xl mx-9'>Buy All</button>
+      </div>
       <div>
         {products.map((product) => {
           return (

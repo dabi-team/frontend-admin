@@ -24,7 +24,7 @@ const Page2 = () => {
             description={product.description}
             categorie={product.title}
             clickAction={() => {
-              history.push("/");
+              history.push("/SingleCat/"+product._id);
             }}
           />
         );
