@@ -29,6 +29,7 @@ const SingleCat = () => {
       {products.map((product) => {
         return (
           <Card
+            image={product.images[0]}
             name={product.title ?? "dsda"}
             categorie={product.category ?? "dfa"}
             price={product.price}

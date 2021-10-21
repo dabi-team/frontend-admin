@@ -35,9 +35,8 @@ const Login = () => {
         name: User.username,
       })
     );
-    if (products?.jwt !== "") {
-      history.push("/");
-    }
+
+    history.push("/");
   };
   return (
     <div className="login-box">

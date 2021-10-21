@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
 import HorizontalCard from "../../components/Horizontalcard/Card";
 import {
-  addToCart,
+  addToBuyAll,
   deleteInCart,
   fetchAllCart,
 } from "../../redux/cart/cart_api_slice";
@@ -29,17 +28,33 @@ const Cart = () => {
       })
     );
   };
+  const addToBuyNow = () => {
+    const lol = products.map((product) => {
+      return {
+        userId: user?.user._id!,
+        productId: product.product._id,
+        cartId: product._id,
+      };
+    });
+    dispatch(addToBuyAll(lol));
+  };
 
   return (
     <div className="mx-12">
-      <div className='flex justify-between'>
+      {/* <div className="flex justify-between">
         <h1 className="text-xl px-9 poppins">Your Cart:</h1>
-        <button className='bg-indigo-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-3xl mx-9'>Buy All</button>
-      </div>
+        <button
+          className="bg-indigo-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-3xl mx-9"
+          onClick={() => addToBuyAll}
+        >
+          Buy All
+        </button>
+      </div> */}
       <div>
         {products.map((product) => {
           return (
             <HorizontalCard
+              image={product.product.images[0]}
               name={product.product.title ?? "dsda"}
               price={0}
               clickAction={() => addToCartLis(product._id)}

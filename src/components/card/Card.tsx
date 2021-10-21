@@ -5,6 +5,7 @@ import { BsFillCartPlusFill } from "react-icons/bs";
 
 interface CardProp {
   name: string;
+  image: string;
   categorie: string;
   price: number;
   clickAction: any;
@@ -14,7 +15,7 @@ interface CardProp {
 const Card = (props: CardProp) => {
   return (
     <div className="card-container shadow-lg">
-      <img src={logo} alt="laptop" onClick={props.photoclick} />
+      <img src={props.image} alt="laptop" onClick={props.photoclick} />
       <div className="details-container">
         <div className="text-xl mb-1">{props.name}</div>
         <div className="description">{props.categorie}</div>

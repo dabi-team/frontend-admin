@@ -56,10 +56,35 @@ export const decreaseInCart = createAsyncThunk(
       id,
     });
     const responces: any = await api.get("/cart/getAll/" + id);
+    console.log(responces);
 
     return responces.data as any;
   }
 );
+export interface CartDeleInfo {
+  userId: string;
+  productId: string;
+  cartId: string;
+}
+export const addToBuyAll = createAsyncThunk(
+  "buynow/addToBuynowAll",
+  async (cartInfos: any) => {
+    cartInfos.forEach(async (cartInfo: any) => {
+      await api.post("/buynow/add", {
+        userId: cartInfo.userId,
+        productId: cartInfo.productId,
+        quantity: 1,
+        status: false,
+      });
+      await api.delete("/cart/remove/" + cartInfo.cartId);
+    });
+    const responces: any = await api.get("/cart/getAll/" + cartInfos[0].userId);
+    console.log(responces);
+
+    return responces.data as any;
+  }
+);
+
 export const deleteInCart = createAsyncThunk(
   "cart/delete",
   async (cartInfo: CartInfo) => {
@@ -88,6 +113,9 @@ const CartSlice = createSlice({
     });
     builder.addCase(deleteInCart.fulfilled, (state, action) => {
       state.cart = action.payload;
+    });
+    builder.addCase(addToBuyAll.fulfilled, (state, action) => {
+      state.cart = [];
     });
   },
 });

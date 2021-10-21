@@ -30,7 +30,7 @@ const Product = () => {
   return (
     <div className="nav-container">
       <div className="white-card-container shadow-lg ">
-        <img src={logo} alt="laptop" />
+        <img src={products.images[0]} alt="laptop" />
         <div className="grid grid-flow-row gap-4 p-20 m-7">
           {/* <div className="text-xl p-2">Lenovo laptop</div> */}
           <div className="text-xl p-2">{products.title}</div>

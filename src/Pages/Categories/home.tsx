@@ -20,11 +20,12 @@ const Page2 = () => {
       {products.map((product) => {
         return (
           <CategorieCard
+            image={product.title}
             name={product.title}
             description={product.description}
             categorie={product.title}
             clickAction={() => {
-              history.push("/SingleCat/"+product._id);
+              history.push("/SingleCat/" + product._id);
             }}
           />
         );

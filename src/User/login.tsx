@@ -27,9 +27,7 @@ const Login = () => {
         password: User.password,
       })
     );
-    if (products?.jwt !== "") {
-      history.push("/");
-    }
+    history.push("/");
   };
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUser({ ...User, [event.target.name]: event.target.value });

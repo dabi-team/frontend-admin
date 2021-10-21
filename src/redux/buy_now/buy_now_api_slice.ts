@@ -38,6 +38,22 @@ export const addToBuy = createAsyncThunk(
     return responces.data as any;
   }
 );
+// export const addToBuyAll = createAsyncThunk(
+//   "buynow/addToBuynowAll",
+//   async (cartInfos: [CartInfo]) => {
+//     cartInfos.forEach(async (cartInfo) => {
+//       await api.post("/buynow/add", {
+//         userId: cartInfo.userId,
+//         productId: cartInfo.productId,
+//         quantity: 1,
+//         status: false,
+//       });
+//       const responces: any = await api.get("/buynow/getAll/" + cartInfo.userId);
+
+//       return responces.data as any;
+//     });
+//   }
+// );
 
 export const deleteInBuy = createAsyncThunk(
   "buy/delete",

@@ -6,12 +6,13 @@ interface CardProp {
   description: string;
   price: number;
   clickAction: any;
+  image: string;
 }
 
 const HorizontalCard = (props: CardProp) => {
   return (
     <div className="horizontal-card-container shadow-lg grid grid-flow-col">
-      <img src={logo} alt="laptop" className="col-span-1" />
+      <img src={props.image} alt="laptop" className="col-span-1" />
       <div className="details-container col-span-12">
         <div className="buying flex justify-between">
           <div>
