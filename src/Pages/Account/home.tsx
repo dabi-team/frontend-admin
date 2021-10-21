@@ -6,7 +6,6 @@ import { useAppSelector } from "../../redux/hooks";
 
 const Account = () => {
   const user = useAppSelector((state) => state.auth.auth);
-  const location = useLocation();
   return (
     <div className="nav-container">
       <div className="white-card-container shadow-lg text-center ">
